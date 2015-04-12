@@ -9,18 +9,6 @@ Template.registerHelper('tweetToUser', function(twitterScreenName){
     return "https://twitter.com/intent/tweet?"+urls.join("&")+"&";
 });
 
-Template.registerHelper('hasTwitterAccount', function(profile){
-    return profile.service == 'twitter';
-});
-
-Template.registerHelper('hasGooglePlusAccount', function(profile){
-    return profile.service == 'google';
-});
-
-Template.registerHelper('hasFacebookAccount', function(profile){
-    return profile.service == 'facebook';
-});
-
 Template.registerHelper('showDisclaimer', function(){
    return Session.get(FIS.KEYS.SHOW_DISCLAIMER);
 });
